@@ -13,12 +13,12 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: ls crawling
       - name: Setup conda environment
         uses: conda-incubator/setup-miniconda@v2
         with:
-            auto-update-conda: true
-            activate-environment: hkbus
             environment-file: crawling/environment.yml
+            activate-environment: hkbus
             auto-activate-base: false
       - run: conda info
       - run: conda list
