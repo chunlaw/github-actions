@@ -10,7 +10,6 @@ pycparser==2.20
 pyOpenSSL==20.0.1
 PySocks==1.7.1
 requests==2.25.1
-setuptools==52.0.0.post20210125
 six==1.15.0
 urllib3==1.26.4
 wheel==0.36.2
