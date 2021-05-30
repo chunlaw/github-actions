@@ -29,15 +29,15 @@ jobs:
           python parseFare.py
           python matchRoutes.py
           python mergeRoutes.py
-          mv routeFareList.json ../public
+          mv routeFareList.json ../
       - name: Update MD5
-        run: md5sum public/routeFareList.json | cut -f1 -d ' ' > public/routeFareList.md5
+        run: md5sum routeFareList.json | cut -f1 -d ' ' > routeFareList.md5
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
             file-path: |
-              public/routeFareList.json
-              public/routeFareList.md5
+              routeFareList.json
+              routeFareList.md5
             commit-msg: Update resources
             github-token: ${{ secrets.GITHUB_TOKEN }}
-            branch: master
+            branch: gh-pages
